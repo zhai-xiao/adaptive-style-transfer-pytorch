@@ -1,0 +1,21 @@
+batch_size: 1                   # Batch size
+image_size: 768                 # Image size
+display_size: 4                 # How many images do you want to display each time
+max_iter: 1000000               # Max iteration
+save_freq: 2500                 # How often do you want to save trained models
+lr: 0.0002                      # Learning rate
+lr_policy: step                 # Learning rate scheduler [step/constant]
+step_size: 200000               # How often to decay learning rate
+gamma: 0.5                      # How much to decay learning rate
+init: kaiming                   # Initialization [gaussian/kaiming/xavier/orthogonal]
+ngf: 32                         # Number of filters in first conv layer of generator(encoder-decoder)
+ndf: 64                         # Number of filters in first conv layer of discriminator.
+dim: 3                          # number of image channels [1/3]
+
+content_data_path: TO_BE_SET    # Path to the content images
+art_data_path: TO_BE_SET        # Path to the style images
+
+discr_loss_weight: 1.           # Weight of discriminator loss
+transformer_loss_weight: 100.   # transformer_loss_weight
+feature_loss_weight: 100.       # Weight of discriminator loss
+discr_success_rate: 0.78        # Weight of discriminator loss
